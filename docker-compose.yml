@@ -14,7 +14,7 @@ services:
     depends_on:
       - mongo
     networks:
-    - springappnetwork  
+    - springappbridge  
 #     deploy:  # This will be considered only in docker swarm.
 #       replicas: 2
 #       update_config:
@@ -31,10 +31,10 @@ services:
     - MONGO_INITDB_ROOT_USERNAME=farhan
     - MONGO_INITDB_ROOT_PASSWORD=far256164
     volumes:
-      - mongodb:/data/db
+      - mongoebsvol:/data/db
     restart: always
     networks:
-    - springappnetwork
+    - springappbridge
     
 volumes:
   mongoebsvol:
