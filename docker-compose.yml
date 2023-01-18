@@ -3,6 +3,10 @@ version: '3.1'
 services:
   springboot:
     image: 966579203816.dkr.ecr.ap-south-1.amazonaws.com/springbootapp:VERSION
+    environment:
+      - AWS_ACCESS_KEY_ID=AKIA6CDE4F3UJMEIP4FO
+      - AWS_SECRET_ACCESS_KEY=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
+    
     restart: always # This will be ignored if we deploy in docker swarm
     environment:
     - MONGO_DB_HOSTNAME=mongo
